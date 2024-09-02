@@ -21,3 +21,5 @@ buck-out/
 .env.local
 
 package-lock.json
+
+uploads
