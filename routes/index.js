@@ -46,7 +46,7 @@ router.post("/", upload.single("source"), async function (req, res, next) {
     const planData = await axios.get(
       `https://api.pics.ee/v2/my/api/status?access_token=${req.body.access_token}`
     );
-    const {usage, quota} = plan.data.data;
+    const {usage, quota} = planData.data.data;
     
     const quotaAmount = quota - usage;
     if (quotaAmount < resultArray.length) {
